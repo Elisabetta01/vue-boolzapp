@@ -1,0 +1,48 @@
+.background{
+     background: linear-gradient(#009688 20%, #d9dbd4 20% 70%);
+}
+
+#container{
+     height: 90%;
+}
+
+#utenti{
+     width: 40%;
+}
+
+#chat{
+     width: 60%;
+}
+
+#mioAvatar{
+     height: 60px;
+}
+
+#notifiche{
+     height: 60px;
+     background-color: #8edafc;
+}
+
+#cerca{
+     height: 40px;
+}
+
+.form-control, .input-group-text{
+     height: 35px;
+}
+
+#contatti{
+     height: 60px;
+     background-color: white;
+}
+
+
+#contatti img{
+     width: 50px;
+}
+
+.text-small{
+     font-size: 10px;
+}
+
+
