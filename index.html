@@ -61,7 +61,8 @@
                          <!-- contatti -->
                          <div id="sezioneContatti" class="overflow-auto">
                               <div id="contatti" v-for="(element, index) in contacts" :key="index"
-                              class="d-flex align-items-center p-2 border-top border-bottom position-relative">
+                              class="d-flex align-items-center p-2 border-top border-bottom position-relative"
+                              @click="cambiaContatto(index)">
                                    <div class="d-flex align-items-center ">
                                         <img :src="element.avatar" :alt="element.name" class="rounded-circle">
      
@@ -83,10 +84,10 @@
                          <!-- avatar 2 -->
                          <div id="avatar2" class="bg-body-secondary d-flex position-relative">
 
-                              <img src="./img/avatar_1.jpg" alt="" class="rounded-circle m-1">
+                              <img :src="contacts[indiceDinamico].avatar" alt="avatar selezionato" class="rounded-circle m-1">
 
                               <div class="m-2">
-                                   <p class="mb-0">Michele</p>
+                                   <p class="mb-0">{{contacts[indiceDinamico].name}}</p>
                                    <p class="mb-0 text-small">Ultimo accesso oggi alle 12.00</p>
                               </div>
 
