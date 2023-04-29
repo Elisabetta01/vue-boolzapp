@@ -8,6 +8,7 @@ const { createApp } = Vue
 createApp({
      data(){
           return{
+               indiceDinamico: 0,
 
                contacts: [
                     {

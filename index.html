@@ -87,6 +87,7 @@
 
                               <span class="d-flex align-items-center">Michele</span>
 
+
                               <div class="d-flex align-items-center position-absolute top-50 end-0 translate-middle-y me-3">
                                    <i class="fa-solid fa-magnifying-glass" style="color: #b1b1b1;"></i>
                                    <i class="fa-solid fa-paperclip mx-3" style="color: #b1b1b1;"></i>
@@ -98,9 +99,17 @@
                          <div id="conversazione" class="">
 
                               <div class="w-75 m-auto py-4 d-flex flex-column ">
-                                   <span class="messaggioInviato "> ciao</span>
+                                   <span v-for="(element, index) in contacts[indiceDinamico].messages"
+                                   :class="(element.status == 'sent') ? 'messaggioInviato' : 'messaggioRicevuto' "
+                                   class="position-relative">{{element.message}} 
+                                        
+                                        <span class="position-absolute bottom-0 end-0 pe-2 text-small"
+                                        v-for="(element, index) in contacts[indiceDinamico].messages"> {{element.date}}
+                                             
+                                        </span>
+                              
+                                   </span>
 
-                                   <span class="messaggioRicevuto ">ciao</span>
                               </div>
 
                          </div>
