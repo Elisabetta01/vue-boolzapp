@@ -11,16 +11,16 @@
 </head>
 <body>
      
-     <div id="app" class="">
+     <div id="app">
 
           <!-- background -->
           <div class="vh-100 background d-flex justify-content-center align-items-center ">
 
                <!-- schermata whatsapp -->
-               <div id="container" class="w-75 m-auto d-flex border">
+               <div id="container" class="w-75 m-auto d-flex">
 
                     <!-- colonna sinistra utenti -->
-                    <div id="utenti" class="bg-secondary-subtle border">
+                    <div id="utenti" class="bg-secondary-subtle">
                          
                          <!-- il mio avatar -->
                          <div id="mioAvatar" class="bg-body-secondary d-flex position-relative">
@@ -78,8 +78,43 @@
                     </div>
      
                     <!-- colonna destra chat -->
-                    <div id="chat" class="border">
+                    <div id="chat" class="position-relative">
      
+                         <!-- avatar 2 -->
+                         <div id="avatar2" class="bg-body-secondary d-flex position-relative">
+
+                              <img src="./img/avatar_1.jpg" alt="" class="rounded-circle m-1">
+
+                              <span class="d-flex align-items-center">Michele</span>
+
+                              <div class="d-flex align-items-center position-absolute top-50 end-0 translate-middle-y me-3">
+                                   <i class="fa-solid fa-magnifying-glass" style="color: #b1b1b1;"></i>
+                                   <i class="fa-solid fa-paperclip mx-3" style="color: #b1b1b1;"></i>
+                                   <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
+                              </div>
+                         </div>
+
+                         <!-- cconversazione -->
+                         <div id="conversazione" class="">
+
+                              <div class="w-75 m-auto py-4 d-flex flex-column ">
+                                   <span class="messaggioInviato "> ciao</span>
+
+                                   <span class="messaggioRicevuto ">ciao</span>
+                              </div>
+
+                         </div>
+
+                         <!-- scrivi messaggi -->
+                         <div id="scriviMessaggi" class="d-flex align-items-center justify-content-between">
+
+                              <i class="fa-regular fa-face-smile ms-3" style="color: #6b7376;"></i>
+
+                              <input class="form-control form-control-lg mx-3 text-small" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-lg example">
+
+                              <i class="fa-solid fa-microphone me-3" style="color: #6b7376;"></i>
+ 
+                         </div>
                     </div>
 
                </div>
