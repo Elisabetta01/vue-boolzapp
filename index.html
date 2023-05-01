@@ -54,7 +54,8 @@
                                    <span class="input-group-text" id="basic-addon1">
                                         <i class="fa-solid fa-magnifying-glass" style="color: #b1b1b1;"></i>
                                    </span>
-                                   <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                   <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1"
+                                   v-model="ricerca" @keyup="ricercaNome">
                               </div>
                          </div>
 
@@ -63,7 +64,8 @@
                               <div id="contatti" v-for="(element, index) in contacts" :key="index"
                               class="d-flex align-items-center p-2 border-top border-bottom position-relative"
                               @click="cambiaContatto(index)">
-                                   <div class="d-flex align-items-center ">
+                                   <div class="d-flex align-items-center"
+                                   v-if="element.visible">
                                         <img :src="element.avatar" :alt="element.name" class="rounded-circle">
      
                                         <div class="mx-2">

@@ -38,6 +38,7 @@ createApp({
           return{
                indiceDinamico: 0,
                testoInput: '',
+               ricerca: '', 
 
                contacts: [
                     {
@@ -232,6 +233,16 @@ createApp({
                          status: 'received'
                     })
                }, 1000)
+          },
+
+          ricercaNome(){
+               this.contacts.forEach((element) => {
+                  if(element.name.toLowerCase().includes(this.ricerca.toLowerCase())){
+                    element.visible = true
+                  } else {
+                    element.visible = false
+                  }
+               })
           }
      }
 }).mount('#app')
