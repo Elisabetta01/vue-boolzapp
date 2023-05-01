@@ -37,6 +37,7 @@ createApp({
      data(){
           return{
                indiceDinamico: 0,
+               testoInput: '',
 
                contacts: [
                     {
@@ -212,6 +213,17 @@ createApp({
           cambiaContatto(i){
                this.indiceDinamico = i
                console.log(i)
+          },
+
+          inviaMessaggio(){
+               if(this.testoInput != ''){
+                    this.contacts[this.indiceDinamico].messages.push({
+                         date: '10/01/2020 16:00:00',
+                         message: this.testoInput,
+                         status: 'sent'
+                    })
+                    this.testoInput = ''
+               }
           }
      }
 }).mount('#app')

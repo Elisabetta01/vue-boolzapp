@@ -122,7 +122,8 @@
 
                               <i class="fa-regular fa-face-smile ms-3" style="color: #6b7376;"></i>
 
-                              <input class="form-control form-control-lg mx-3 text-small" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-lg example">
+                              <input class="form-control form-control-lg mx-3 text-small" type="text" placeholder="Scrivi un messaggio" aria-label=".form-control-lg example"
+                              v-model="testoInput" @KeyUp.enter="inviaMessaggio">
 
                               <i class="fa-solid fa-microphone me-3" style="color: #6b7376;"></i>
  
