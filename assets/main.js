@@ -224,6 +224,14 @@ createApp({
                     })
                     this.testoInput = ''
                }
+
+               setTimeout(()=>{
+                    this.contacts[this.indiceDinamico].messages.push({
+                         date: '10/01/2020 16:01:00',
+                         message: 'Ok!',
+                         status: 'received'
+                    })
+               }, 1000)
           }
      }
 }).mount('#app')
